@@ -19,4 +19,8 @@ switch ($luaChon){
         $cPro = new ProductController();
         $cPro->addProduct();
         break;
+    default:
+        $cPro = new ProductController();
+        $cPro->listProduct();
+        break;
 }
