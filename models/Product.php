@@ -10,6 +10,7 @@ class Product{
     }
     // Moi 1 cau lenh sql thi nen tao ra 1 pt rieng
     // Hien thi tat ca du lieu co trong
+
     public function getAllDataProduct(){
         // b1: tao bien chua chuoi sql
         // tip: can phai chay truoc cau lenh sql tren
