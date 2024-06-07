@@ -22,4 +22,9 @@ class Product{
         // b3: tra ve ket qua
         return $this->connect->loadData();
     }
+    public function setInsertDataProduct($id, $name, $price, $image, $quantyti, $status){
+        $sql = "INSERT INTO `products` VALUES (?,?,?,?,?,?)";
+        $this->connect->setQuery($sql);
+        return $this->connect->loadData([$id, $name, $price, $image, $quantyti, $status]);
+    }
 }
