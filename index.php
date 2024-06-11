@@ -19,6 +19,12 @@ $cPro = new ProductController();
      case 'addProduct':
          $cPro->addProduct();
          break;
+     case 'editProduct':
+         $cPro->editProduct();
+         break;
+     case 'deleteProduct':
+         $cPro->deleteProduct();
+         break;
      default:
          $cPro->listProduct();
          break;

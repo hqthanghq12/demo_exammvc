@@ -31,8 +31,8 @@
         <td><?php echo $value->quantity ?></td>
         <td><?php echo $value->status ?></td>
         <td>
-            <button>Sửa</button>
-            <button>Xóa</button>
+            <a href="?act=editProduct&id=<?php echo $value->id ?>"><button>Sửa</button></a>
+            <a href="?act=deleteProduct&id=<?php echo $value->id ?>"><button>Xóa</button></a>
         </td>
     </tr>
     <?php }?>

@@ -27,4 +27,19 @@ class Product{
         $this->connect->setQuery($sql);
         return $this->connect->loadData([$id, $name, $price, $image, $quantyti, $status]);
     }
+    public function getIdProduct($id){
+        $sql = "SELECT * FROM `products` WHERE id = ?";
+        $this->connect->setQuery($sql);
+        return $this->connect->loadData([$id], false);
+    }
+    public function updateProduct( $name, $price, $image, $quantyti, $status, $id){
+        $sql = "UPDATE `products` SET `name`= ?,`price`= ?,`image`= ?,`quantity`= ?,`status`= ? WHERE `id`= ?";
+        $this->connect->setQuery($sql);
+        return $this->connect->loadData([ $name, $price, $image, $quantyti, $status, $id], false);
+    }
+    public function deleteProduct($id){
+        $sql = "DELETE FROM `products` WHERE id = ?";
+        $this->connect->setQuery($sql);
+        return $this->connect->loadData([$id], false);
+    }
 }
